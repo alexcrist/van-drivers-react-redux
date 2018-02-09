@@ -1,5 +1,14 @@
 import axios from 'axios';
 
+// Api key ---------------------------------------------------------------------
+
+const BASE = 'https://van-drivers.herokuapp.com/drivers';
+const API = {
+  GET: `${BASE}/week`,
+  CREATE: `${BASE}`,
+  DELETE: `${BASE}`
+};
+
 // Action types ----------------------------------------------------------------
 
 export const CHANGE_SELECTED_DATE = 'CHANGE_SELECTED_DATE';
@@ -13,11 +22,10 @@ export const GENERAL_FAILURE = 'GENERAL_FAILURE';
 // Private actions -------------------------------------------------------------
 
 const getDrivers = (date, range) => {
+  // Note: 'range' is currently unsupported by the API
   return dispatch => {
     dispatch({ GET_DRIVERS, date, range });
-
-    const url = `TODO/${date}/${range}`;
-    axios.get(url)
+    axios.get(`${API.GET}/${date}`)
       .then(response => dispatch(getDriversSuccess(response.data)))
       .catch(error => dispatch(generalFailure('Could not get drivers.', error)));
   };
@@ -49,9 +57,8 @@ export const createDriver = driver => {
   return (dispatch, getState) => {
     dispatch({ type: CREATE_DRIVER, driver });
 
-    const url = `TODO`;
     const { selectedDate: date, selectedRange: range } = getState();
-    axios.post(url)
+    axios.post(`${API.CREATE}`, driver)
       .then(response => {
         dispatch(generalSuccess('Driver created!'));
         dispatch(getDrivers(date, range));
@@ -64,9 +71,8 @@ export const deleteDriver = driver => {
   return (dispatch, getState) => {
     dispatch({ type: DELETE_DRIVER, driver });
 
-    const url = `TODO`;
     const { selectedDate: date, selectedRange: range } = getState();
-    axios.delete(url)
+    axios.delete(`${API.DELETE}/${driver.id}`)
       .then(response => {
         dispatch(generalSuccess('Driver deleted!'));
         dispatch(getDrivers(date, range));

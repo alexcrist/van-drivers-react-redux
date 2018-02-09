@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import reducers from './state/reducers';
 import defaultState from './state/defaultState';
 import App from './App';
@@ -15,7 +16,9 @@ const store = createStore(
 
 const content = (
   <Provider store={store}>
-    <App />
+    <MuiThemeProvider>
+      <App />
+    </MuiThemeProvider>
   </Provider>
 );
 
