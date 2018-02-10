@@ -9,5 +9,5 @@ export default {
   fetchingDrivers: false,
   successMessage: '',
   failureMessage: '',
-  drivers: {}
+  practiceDrivers: {}
 };

@@ -4,11 +4,13 @@ import styles from 'styled-components';
 
 const Button = styles(RaisedButton)`
   flex-grow: 1;
-  margin-bottom: 20px;
+  margin: 10px;
 `;
 
 export default ({ changeSelectedDate }) => {
   return (
-    <Button label="Today" primary={true} />
+    <Button 
+      label='Today'
+      labelStyle={{ textTransform: 'none' }} />
   );
 };

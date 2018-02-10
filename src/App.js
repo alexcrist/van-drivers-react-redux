@@ -7,7 +7,7 @@ import Today from './components/Today';
 import Practice from './components/Practice/Practice';
 
 const AppContainer = styles.div`
-  max-width: 1000px;
+  max-width: 800px;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,10 @@ class App extends Component {
       <AppContainer>
         <Today changeSelectedDate={changeSelectedDate} />
         <Datepicker changeSelectedDate={changeSelectedDate} />
-        <Practice createDriver={createDriver} deleteDriver={deleteDriver} />
+        <Practice 
+          practiceDrivers={this.props.practiceDrivers}
+          createDriver={this.props.createDriver}
+          deleteDriver={this.props.deleteDriver} />
       </AppContainer>
     );
   }
