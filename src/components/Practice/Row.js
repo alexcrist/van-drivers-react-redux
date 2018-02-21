@@ -13,7 +13,7 @@ const Container = styles.div`
 `;
 
 const Date = styles.div`
-  min-width: 90px;
+  min-width: 100px;
   line-height: 72px;
   font-size: 15px;
 `;

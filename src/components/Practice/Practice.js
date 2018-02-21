@@ -19,20 +19,24 @@ const RowContainer = styles(Card)`
 export default ({ practiceDrivers, createDriver, deleteDriver }) => {
 
   practiceDrivers = {
-    '1996-03-01': {
+    '2017-12-31': {
       numDrivers: 1,
-      drivers: [
-        'guy1', 'alex'
-      ]
+      drivers: []
     },
     '2018-01-01': {
       numDrivers: 2,
       drivers: []
     },
     '2018-01-02': {
-      numDrivers: 3,
+      numDrivers: 2,
       drivers: [
         'guy3', 'guy4'
+      ]
+    },
+    '2018-01-03': {
+      numDrivers: 1,
+      drivers: [
+        'guy3'
       ]
     }
   };
