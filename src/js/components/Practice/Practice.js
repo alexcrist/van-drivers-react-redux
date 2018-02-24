@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Row from './Row';
+import PracticeRow from './PracticeRow';
 
 export default ({ practiceDrivers, createDriver, deleteDriver }) => {
 
@@ -33,7 +33,13 @@ export default ({ practiceDrivers, createDriver, deleteDriver }) => {
   });
   driverList = _.sortBy(driverList, ({ date }) => date);
   const rows = _.map(driverList, ({ date, drivers, numDrivers }, index) => {
-    return <Row key={index} date={date} drivers={drivers} numDrivers={numDrivers} />;
+    return (
+      <PracticeRow
+        key={index}
+        date={date}
+        drivers={drivers}
+        numDrivers={numDrivers} />
+    );
   });
   
   return (

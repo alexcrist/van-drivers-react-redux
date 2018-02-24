@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { changeSelectedDate, createDriver, deleteDriver} from './state/actions';
-import Datepicker from './components/Datepicker';
-import Today from './components/Today';
+import Datepicker from './components/Datepicker/Datepicker';
+import Today from './components/Today/Today';
 import Practice from './components/Practice/Practice';
+
+import '../../css/App';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='App'>
         <Today changeSelectedDate={changeSelectedDate} />
         <Datepicker changeSelectedDate={changeSelectedDate} />
         <Practice 
