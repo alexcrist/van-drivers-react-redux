@@ -1,20 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { Card, CardHeader } from 'material-ui/Card';
-import styles from 'styled-components';
 import Row from './Row';
-
-const Container = styles.div`
-  margin: 10px;
-`;
-
-const HeaderContainer = styles(Card)`
-
-`;
-
-const RowContainer = styles(Card)`
-  padding: 1px 20px;
-`;
 
 export default ({ practiceDrivers, createDriver, deleteDriver }) => {
 
@@ -51,13 +37,13 @@ export default ({ practiceDrivers, createDriver, deleteDriver }) => {
   });
   
   return (
-    <Container>
-      <HeaderContainer>
-        <CardHeader title='Practice' titleStyle={{ fontSize: '16px' }} />
-      </HeaderContainer>
-      <RowContainer>
+    <div>
+      <div>
+        <div>Practice</div>
+      </div>
+      <div>
         {rows}
-      </RowContainer>
-    </Container>
+      </div>
+    </div>
   );
 };
