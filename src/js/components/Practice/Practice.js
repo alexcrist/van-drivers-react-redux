@@ -2,6 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import PracticeRow from './PracticeRow';
 
+import '../../../css/components/Practice/Practice.css';
+
 export default ({ practiceDrivers, createDriver, deleteDriver }) => {
 
   practiceDrivers = {
@@ -43,8 +45,8 @@ export default ({ practiceDrivers, createDriver, deleteDriver }) => {
   });
   
   return (
-    <div>
-      <div>
+    <div className='Practice'>
+      <div className='Practice-header'>
         <div>Practice</div>
       </div>
       <div>

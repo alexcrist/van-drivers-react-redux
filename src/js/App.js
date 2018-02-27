@@ -5,7 +5,7 @@ import Datepicker from './components/Datepicker/Datepicker';
 import Today from './components/Today/Today';
 import Practice from './components/Practice/Practice';
 
-import '../../css/App';
+import '../css/App.css';
 
 class App extends Component {
   render() {

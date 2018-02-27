@@ -2,6 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import fecha from 'fecha';
 
+import '../../../css/components/Practice/PracticeRow.css';
+
 const getHintText = () => {
   const options = [
     'You\'re a star!',
@@ -47,7 +49,7 @@ export default ({ date, drivers, numDrivers }) =>  {
   const formattedDate = fecha.format(fecha.parse(date, 'YYYY-MM-DD'), 'ddd, MMM Do');
 
   return (
-    <div>
+    <div className='PracticeRow'>
       <div>{formattedDate}</div>
       {items}
     </div>

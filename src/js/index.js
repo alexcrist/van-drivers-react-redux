@@ -7,6 +7,8 @@ import reducers from './state/reducers';
 import defaultState from './state/defaultState';
 import App from './App';
 
+import '../css/index.css';
+
 const store = createStore(
   reducers,
   defaultState,
