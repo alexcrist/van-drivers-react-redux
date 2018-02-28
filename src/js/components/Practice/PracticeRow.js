@@ -28,18 +28,20 @@ export default ({ date, drivers, numDrivers }) =>  {
     const driver = drivers[index];
     if (driver) {
       items.push(
-      <div>
-        <div>tests</div>
-        <button>delete</button> 
+      <div className='PracticeRow-item'>
+        <div className='PracticeRow-value'>tests</div>
+        <button className='PracticeRow-delete'>x</button> 
       </div>
     );
     } else {
 
       items.push(
-        <div>
-          <form>
-            <input />
-            <button>save</button>
+        <div className='PracticeRow-item'>
+          <form className='PracticeRow-form'>
+            <input 
+              className='PracticeRow-input'
+              placeholder={getHintText()} />
+            <button className='PracticeRow-save'>+</button>
           </form>
         </div>
       );
@@ -50,8 +52,10 @@ export default ({ date, drivers, numDrivers }) =>  {
 
   return (
     <div className='PracticeRow'>
-      <div>{formattedDate}</div>
-      {items}
+      <div className='PracticeRow-date'>{formattedDate}</div>
+      <div className='PracticeRow-items'>
+        {items}
+      </div>
     </div>
   );
 };

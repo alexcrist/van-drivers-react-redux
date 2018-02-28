@@ -1,4 +1,36 @@
 .App {
-  max-width: 1000px;
   margin: auto;
+}
+
+.App-header {
+  padding: 12px 0;
+  background-color: #424242;
+  margin-bottom: 16px;
+}
+
+.App-title {
+  color: #f9f9f9;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+.App-subtitle {
+  color: #f9f9f9;
+  font-weight: 400;
+}
+
+.App-title,
+.App-subtitle,
+.App-content {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 732px) {
+  .App-title,
+  .App-subtitle,
+  .App-content {
+    max-width: calc(100% - 32px);
+  }
 }

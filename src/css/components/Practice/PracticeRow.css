@@ -1,0 +1,88 @@
+.PracticeRow {
+  display: flex;
+}
+
+.PracticeRow:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.PracticeRow-date {
+  width: 105px;
+  margin-right: 16px;
+  border-radius: 4px;
+}
+
+.PracticeRow-items {
+  display: flex;
+  flex-grow: 1;
+}
+
+.PracticeRow-item {
+  flex-grow: 1;
+  display: flex;
+}
+
+.PracticeRow-item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.PracticeRow-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.PracticeRow-value {
+  padding: 0 8px;
+  background-color: #BBDEFB;
+  border-radius: 4px;
+  margin-right: 8px;
+  flex-grow: 1;
+}
+
+.PracticeRow-form {
+  display: flex;
+  flex-grow: 1;
+}
+
+.PracticeRow-input {
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
+.PracticeRow-save {
+  width: 32px;
+  background-color: #4CAF50;
+  color: #FFF;
+}
+
+.PracticeRow-delete {
+  width: 32px;
+  background-color: #D50000;
+  color: #FFF;
+}
+
+@media only screen and (max-width: 600px) {
+  .PracticeRow {
+    flex-direction: column;
+  }
+
+  .PracticeRow:not(:last-child) {
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #E0E0E0;
+  }  
+
+  .PracticeRow-items {
+    flex-direction: column;
+  }
+
+  .PracticeRow-item,
+  .PracticeRow-item:not(:first-child),
+  .PracticeRow-item:not(:last-child) {
+    margin: 0 0 8px;
+  }
+
+  .PracticeRow-date {
+    line-height: 16px;
+    margin-bottom: 16px;
+  }
+}

@@ -1,11 +1,15 @@
 .Practice {
   width: 100%;
   border-radius: 4px;
-  box-shadow: 0 10px 10px rgba(0,0,0,0.01), 0 6px 6px rgba(0,0,0,0.04);}
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.04), 0 6px 6px rgba(0, 0, 0, 0.04);}
 
 .Practice-header {
   background-color: #0288D1;
   border-radius: 4px 4px 0 0;
   color: #FFF;
   padding: 0 12px;
+}
+
+.Practice-content {
+  padding: 16px;
 }

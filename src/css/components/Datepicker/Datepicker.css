@@ -7,8 +7,7 @@
 .Datepicker-right {
   flex-grow: 1;
   position: relative;
-  background-color: #BA68C8;
-  color: #FFF;
+  background-color: #E0E0E0;
 }
 
 .Datepicker-date {

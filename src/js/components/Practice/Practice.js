@@ -49,7 +49,7 @@ export default ({ practiceDrivers, createDriver, deleteDriver }) => {
       <div className='Practice-header'>
         <div>Practice</div>
       </div>
-      <div>
+      <div className='Practice-content'>
         {rows}
       </div>
     </div>
