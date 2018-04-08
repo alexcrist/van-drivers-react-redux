@@ -1,13 +1,22 @@
 import React from 'react';
+import moment from 'moment';
 
 import '../../../css/components/Datepicker/Datepicker.css';
 
-export default ({ changeSelectedDate }) => {
+export default ({ date, changeDate }) => {
+  const prettyDate = moment(date, 'MM-DD-YYYY').format('MMMM D');
+  const lastWeek = moment(date, 'MM-DD-YYYY').subtract(1, 'week').format('MM-DD-YYYY');
+  const nextWeek = moment(date, 'MM-DD-YYYY').add(1, 'week').format('MM-DD-YYYY');
+
   return (
     <div className='Datepicker'>
-      <button className='Datepicker-left'>&#8249;</button>
-      <div className='Datepicker-date'>Feb 9, 2018</div>
-      <button className='Datepicker-right'>&#8250;</button>
+      <button
+        onClick={() => changeDate(lastWeek)}
+        className='Datepicker-left'>&#8249;</button>
+      <div className='Datepicker-date'>{prettyDate}</div>
+      <button
+        onClick={() => changeDate(nextWeek)}
+        className='Datepicker-right'>&#8250;</button>
     </div>
   );
 };

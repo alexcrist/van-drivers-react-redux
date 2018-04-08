@@ -1,9 +1,11 @@
 .App {
   margin: auto;
+  position: relative;
+  min-height: 100vh;
 }
 
 .App-header {
-  padding: 12px 0;
+  padding: 16px 0;
   background-color: #424242;
   margin-bottom: 16px;
 }
@@ -11,12 +13,18 @@
 .App-title {
   color: #f9f9f9;
   font-weight: 300;
-  margin-bottom: 4px;
+  line-height: 1.1;
+  margin-bottom: 8px;
 }
 
 .App-subtitle {
   color: #f9f9f9;
+  line-height: 1.1;
   font-weight: 400;
+}
+
+.App-content {
+  padding-bottom: 48px;
 }
 
 .App-title,

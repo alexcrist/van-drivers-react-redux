@@ -1,0 +1,24 @@
+.Footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #424242;
+}
+
+.Footer-body {
+  max-width: 700px;
+  margin: auto;
+  padding: 8px;
+}
+
+.Footer-link {
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 732px) {
+  .Footer-body {
+    max-width: calc(100% - 32px);
+  }
+}

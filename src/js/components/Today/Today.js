@@ -2,8 +2,10 @@ import React from 'react';
 
 import '../../../css/components/Today/Today.css';
 
-export default ({ changeSelectedDate }) => {
+export default ({ today }) => {
   return (
-    <button className='Today'>Today</button>
+    <button 
+      onClick={() => today()}
+      className='Today'>Today</button>
   );
 };

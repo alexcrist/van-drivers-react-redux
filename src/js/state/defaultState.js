@@ -1,13 +1,10 @@
-import fecha from 'fecha';
-
-const today = fecha.format(new Date(), 'YYYY-MM-DD');
+import moment from 'moment';
 
 export default {
-  currentDate: today,
-  selectedDate: today,
-  selectedDateRange: 7,
+  date: '',
+  range: 7,
   fetchingDrivers: false,
   successMessage: '',
   failureMessage: '',
-  practiceDrivers: {}
+  drivers: {}
 };

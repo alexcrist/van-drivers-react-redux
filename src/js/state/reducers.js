@@ -1,5 +1,5 @@
 import {
-  CHANGE_SELECTED_DATE,
+  CHANGE_DATE,
   GET_DRIVERS_SUCCESS,
   GENERAL_SUCCESS,
   GENERAL_FAILURE
@@ -7,9 +7,10 @@ import {
 
 export default (state, action) => {
   switch (action.type) {
-    case CHANGE_SELECTED_DATE:
+    case CHANGE_DATE:
       return {
         ...state,
+        date: action.date,
         fetchingDrivers: true
       };
 
@@ -19,7 +20,6 @@ export default (state, action) => {
         fetchingDrivers: false,
         drivers: action.drivers
       };
-
 
     case GENERAL_SUCCESS:
       return {
