@@ -1,6 +1,10 @@
 # van-drivers-react-redux
 
-> A front end for a van scheduling application for the Northeastern Climbing Team.
+> A front end for a van scheduling application for the Northeastern Climbing Team. Written using React and Redux.
+
+## Live Demo
+
+https://alexcrist.github.io/van-drivers-react-redux/
 
 ## Local Developement
 
