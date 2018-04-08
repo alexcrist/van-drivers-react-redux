@@ -6,7 +6,7 @@ import PracticeEntry from './PracticeEntry';
 import '../../../css/components/Practice/PracticeRow.css';
 
 export default ({ date, drivers, numDrivers, createDriver, deleteDriver }) => {
-  const formattedDate = moment(date, 'MM-DD-YYYY').format('ddd, MMM Do');
+  const formattedDate = moment(date, 'MM-DD-YYYY').format('ddd, MMM. D');
   const entries = [];
 
   _.times(numDrivers, index => {

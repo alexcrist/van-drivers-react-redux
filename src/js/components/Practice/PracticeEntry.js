@@ -35,11 +35,11 @@ export default class PracticeEntry extends Component {
   }
 
   createDriver() {
-    const { createDriver } = this.props;
     return () => {
+      console.log('test');
       const name = this.state.inputValue;
       const { date } = this.props;
-      createDriver({ name, date });
+      this.props.createDriver({ name, date });
     }
   }
 
@@ -50,7 +50,7 @@ export default class PracticeEntry extends Component {
         <div className='PracticeEntry-value'>{driver.name}</div>
         <button 
           className='PracticeEntry-delete'
-          onClick={() => deleteDriver(driver)}>x</button> 
+          onClick={() => deleteDriver(driver)}>×</button> 
       </div>
     );
   }
@@ -66,14 +66,17 @@ export default class PracticeEntry extends Component {
             placeholder={this.getHintText()} />
           <button
             className='PracticeEntry-save'
-            onClick={this.createDriver}>+</button>
+            type='button'
+            onClick={this.createDriver()}>+</button>
         </form>
       </div>
     );
   }
 
   render() {
-    const { driver } = this.props;
-    return driver ? this.getDriverElement() : this.getNonDriverElement();
+    if (this.props.driver) {
+      return this.getDriverElement();
+    }
+    return this.getNonDriverElement();
   }
 }

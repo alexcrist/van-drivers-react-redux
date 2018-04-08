@@ -1,0 +1,14 @@
+.Status {
+  padding: 4px 16px;
+  border-radius: 4px;
+  color: #222;
+  margin-bottom: 32px;
+}
+
+.Status-success {
+  background-color: #DCEDC8;
+}
+
+.Status-failure {
+  background-color: #ffebee;
+}

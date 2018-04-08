@@ -1,5 +1,4 @@
 import axios from 'axios';
-import _ from 'lodash';
 import moment from 'moment';
 
 // Api -------------------------------------------------------------------------
@@ -42,12 +41,10 @@ const transformDrivers = (drivers, date) => {
     const key = moment(date, 'MM-DD-YYYY')
       .add(index, 'day')
       .format('MM-DD-YYYY');
-    
     const value = {
       numDrivers: numDriversMap[index],
       drivers: content
     };
-
     transformedDrivers[key] = value;
   });
   
@@ -55,11 +52,7 @@ const transformDrivers = (drivers, date) => {
 }
 
 const getDriversSuccess = (drivers, date) => {
-  console.log('drivers');
-  console.log(drivers);
   const transformedDrivers = transformDrivers(drivers, date);
-  console.log('transformedDrivers');
-  console.log(transformedDrivers);
   return { type: GET_DRIVERS_SUCCESS, drivers: transformedDrivers };
 };
 
@@ -90,16 +83,16 @@ export const changeDate = (date, range) => {
 
 export const createDriver = driver => {
   return (dispatch, getState) => {
+    console.log('here we go');
     dispatch({ type: CREATE_DRIVER, driver });
 
     const { date, range } = getState();
-    console.log(`Create driver: ${driver}`);
-    // axios.post(`${API.CREATE}`, driver)
-    //   .then(response => {
-    //     dispatch(generalSuccess('Driver created!'));
-    //     dispatch(getDrivers(date, range));
-    //   })
-    //   .catch(error => generalFailure('Could not create driver.', error));
+    axios.post(`${API.CREATE}`, driver)
+      .then(response => {
+        dispatch(generalSuccess(`Scheduled driver, ${driver.name}!`));
+        dispatch(getDrivers(date, range));
+      })
+      .catch(error => generalFailure('Could not create driver.', error));
   };
 };
 
@@ -108,12 +101,11 @@ export const deleteDriver = driver => {
     dispatch({ type: DELETE_DRIVER, driver });
 
     const { date, range } = getState();
-    console.log(`Delete driver: ${driver}`);
-    // axios.delete(`${API.DELETE}/${driver.id}`)
-    //   .then(response => {
-    //     dispatch(generalSuccess('Driver deleted!'));
-    //     dispatch(getDrivers(date, range));
-    //   })
-    //   .catch(error => generalFailure('Could not delete driver.', error));
+    axios.delete(`${API.DELETE}/${driver._id}`)
+      .then(response => {
+        dispatch(generalSuccess(`Removed driver, ${driver.name}.`));
+        dispatch(getDrivers(date, range));
+      })
+      .catch(error => generalFailure('Could not delete driver.', error));
   };
 };

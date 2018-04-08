@@ -4,7 +4,7 @@ import moment from 'moment';
 import '../../../css/components/Datepicker/Datepicker.css';
 
 export default ({ date, changeDate }) => {
-  const prettyDate = moment(date, 'MM-DD-YYYY').format('MMMM D');
+  const prettyDate = moment(date, 'MM-DD-YYYY').format('MMM. D');
   const lastWeek = moment(date, 'MM-DD-YYYY').subtract(1, 'week').format('MM-DD-YYYY');
   const nextWeek = moment(date, 'MM-DD-YYYY').add(1, 'week').format('MM-DD-YYYY');
 

@@ -4,6 +4,7 @@ import { today, changeDate, createDriver, deleteDriver } from './state/actions';
 import Datepicker from './components/Datepicker/Datepicker';
 import Today from './components/Today/Today';
 import Practice from './components/Practice/Practice';
+import Status from './components/Status/Status';
 import Footer from './components/Footer/Footer';
 
 import '../css/App.css';
@@ -31,6 +32,9 @@ class App extends Component {
             drivers={this.props.drivers}
             createDriver={this.props.createDriver}
             deleteDriver={this.props.deleteDriver} />
+          <Status
+            successMessage={this.props.successMessage}
+            failureMessage={this.props.failureMessage} />
         </div>
         <Footer />
       </div>
