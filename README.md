@@ -2,7 +2,7 @@
 
 > A front end for a van scheduling application for the Northeastern Climbing Team. Written using React and Redux.
 
-![](./screenshot.JPG =width=200)
+![](./screenshot.JPG | width=200)
 
 ## Live Application
 
