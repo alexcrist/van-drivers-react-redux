@@ -3,8 +3,6 @@ import React from 'react';
 import '../../../css/components/Status/Status.css';
 
 export default ({ successMessage, failureMessage }) => {
-  successMessage = 'asdfasdfa';
-
   const success = (
     <div className='Status Status-success'>
       {successMessage}
