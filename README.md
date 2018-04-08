@@ -2,7 +2,7 @@
 
 > A front end for a van scheduling application for the Northeastern Climbing Team. Written using React and Redux.
 
-## Live Demo
+## Live Application
 
 https://alexcrist.github.io/van-drivers-react-redux/
 
