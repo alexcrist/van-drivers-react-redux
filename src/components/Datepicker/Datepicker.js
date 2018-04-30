@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import '../../../css/components/Datepicker/Datepicker.css';
+import './Datepicker.css';
 
 export default ({ date, changeDate }) => {
   const prettyDate = moment(date, 'MM-DD-YYYY').format('MMM. D');

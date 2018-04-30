@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../../css/components/Status/Status.css';
+import './Status.css';
 
 export default ({ successMessage, failureMessage }) => {
   const success = (

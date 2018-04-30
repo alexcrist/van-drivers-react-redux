@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../../css/components/Footer/Footer.css';
+import './Footer.css';
 
 export default () => {
   return (

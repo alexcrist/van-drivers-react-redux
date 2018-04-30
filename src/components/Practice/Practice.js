@@ -1,8 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
-import PracticeRow from './PracticeRow';
+import PracticeRow from './PracticeRow/PracticeRow';
 
-import '../../../css/components/Practice/Practice.css';
+import './Practice.css';
 
 export default ({ drivers, createDriver, deleteDriver }) => {
 

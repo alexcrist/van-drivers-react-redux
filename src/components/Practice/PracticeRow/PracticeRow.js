@@ -1,9 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
 import moment from 'moment';
-import PracticeEntry from './PracticeEntry';
+import PracticeEntry from '../PracticeEntry/PracticeEntry';
 
-import '../../../css/components/Practice/PracticeRow.css';
+import './PracticeRow.css';
 
 export default ({ date, drivers, numDrivers, createDriver, deleteDriver }) => {
   const formattedDate = moment(date, 'MM-DD-YYYY').format('ddd, MMM. D');

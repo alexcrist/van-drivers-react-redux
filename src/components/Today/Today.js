@@ -1,10 +1,10 @@
 import React from 'react';
 
-import '../../../css/components/Today/Today.css';
+import './Today.css';
 
 export default ({ today }) => {
   return (
-    <button 
+    <button
       onClick={() => today()}
       className='Today'>Today</button>
   );

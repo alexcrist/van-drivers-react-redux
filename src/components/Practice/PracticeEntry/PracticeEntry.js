@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../../css/components/Practice/PracticeEntry.css';
+import './PracticeEntry.css';
 
 export default class PracticeEntry extends Component {
 

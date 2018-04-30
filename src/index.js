@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducers from './state/reducers';
 import defaultState from './state/defaultState';
-import App from './App';
 
-import '../css/index.css';
+import App from './components/App/App';
+
+import './index.css';
 
 const store = createStore(
   reducers,

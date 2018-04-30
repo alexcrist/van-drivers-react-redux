@@ -47,7 +47,7 @@ const transformDrivers = (drivers, date) => {
     };
     transformedDrivers[key] = value;
   });
-  
+
   return transformedDrivers;
 }
 

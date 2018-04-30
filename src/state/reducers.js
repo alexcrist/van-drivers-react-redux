@@ -27,7 +27,6 @@ export default (state, action) => {
         successMessage: action.message,
         failureMessage: ''
       };
-    
 
     case GENERAL_FAILURE:
       return {

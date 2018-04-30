@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { today, changeDate, createDriver, deleteDriver } from './state/actions';
-import Datepicker from './components/Datepicker/Datepicker';
-import Today from './components/Today/Today';
-import Practice from './components/Practice/Practice';
-import Status from './components/Status/Status';
-import Footer from './components/Footer/Footer';
 
-import '../css/App.css';
+import { connect } from 'react-redux';
+import { today, changeDate, createDriver, deleteDriver } from '../../state/actions';
+
+import Datepicker from '../Datepicker/Datepicker';
+import Today from '../Today/Today';
+import Practice from '../Practice/Practice';
+import Status from '../Status/Status';
+import Footer from '../Footer/Footer';
+
+import './App.css';
 
 class App extends Component {
   constructor(props) {
